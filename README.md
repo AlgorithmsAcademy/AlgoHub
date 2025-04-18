@@ -7,16 +7,29 @@
 
 <!-- Will work once the repo is public -->
 
-![Static Badge](https://img.shields.io/github/stars/AlgoHub/AlgoHub)
-![GitHub License](https://img.shields.io/github/license/EonP/AlgoHub)
-![GitHub top language](https://img.shields.io/github/languages/top/EonP/AlgoHub)
-![GitHub last commit](https://img.shields.io/github/last-commit/Eonp/AlgoHub)
+![GitHub stars](https://img.shields.io/github/stars/AlgorithmsAcademy/AlgoHub?style=flat)
+![GitHub License](https://img.shields.io/github/license/AlgorithmsAcademy/AlgoHub)
+![GitHub top language](https://img.shields.io/github/languages/top/AlgorithmsAcademy/AlgoHub)
+![GitHub last commit](https://img.shields.io/github/last-commit/AlgorithmsAcademy/AlgoHub)
 
 This repo collects common algorithms & data structures that are useful for interviews — each with
 
 1. a **written and/or visual explanation**
 2. a **python implementation**
 3. **test cases**
+
+## Installation
+
+1. Install [uv](https://github.com/astral-sh/uv) - a fast Python package installer and resolver. See the [official documentation](https://github.com/astral-sh/uv#installation) for installation instructions.
+
+2. Clone the repository and setup the environment:
+   ```bash
+   git clone https://github.com/AlgorithmsAcademy/AlgoHub.git
+   cd AlgoHub
+   uv sync --all-extras
+   source .venv/bin/activate
+   pre-commit install
+   ```
 
 ## Contribution
 
