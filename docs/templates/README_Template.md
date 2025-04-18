@@ -1,27 +1,47 @@
-# Name_Of_The_Algorithm
+# 🧠 *Algorithm Name*
 
-## Essentials
+## 📝 Description
 
-### Description
+*Add a short description of the algorithm, including its purpose, category (e.g., sorting, graph traversal), and any notable properties (e.g., recursive, greedy, divide-and-conquer).*
 
-### Case Of Use
+## ⏰ Time Complexity
 
-### Time Complexity
+| Case    | Complexity                 |
+| ------- | -------------------------- |
+| Best    | _e.g.,_ $\Omega(n)$        |
+| Average | _e.g.,_ $\Theta(n \log n)$ |
+| Worst   | _e.g.,_ $O(n^2)$           |
 
-$O(\dots)$
-$\Theta(\dots)$
-$\Omega(\dots)$
+## 💾 Space Complexity
 
-### Space Complexity
+*Describe whether the algorithm is in-place or uses extra space.*
 
-$O(\dots)$
-$\Theta(\dots)$
-$\Omega(\dots)$
+## 💡 Intuition
 
-## More About
+*Explain the core idea of the algorithm.*
 
-### Flowchart
+*What’s the key insight? What analogy or mental model helps understand it?*
 
-### Pseudocode
+## 🧾 Pseudocode
 
-### Complexity Analysis
+```text
+algorithm_name(A, n):
+    for i = 1 to n:
+        do something
+        if condition
+            do x
+        else
+            do y
+```
+
+## 📈 Time Complexity Analysis
+
+*Analyse the time complexity and explain how the above results were obtained*
+
+## 📦 Use Cases
+
+*List of real world applications and problems where this algorithm appears*
+
+## 📊 Visual or Flowchart
+
+*Visual or flowchart if needed to better understand the algorithm*
