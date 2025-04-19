@@ -12,11 +12,13 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/AlgorithmsAcademy/AlgoHub)
 ![GitHub last commit](https://img.shields.io/github/last-commit/AlgorithmsAcademy/AlgoHub)
 
-This repo collects common algorithms & data structures that are useful for interviews — each with
+This repo collects common algorithms & data structures that are useful for interviews — each with:
 
 1. a **written and/or visual explanation**
 2. a **python implementation**
 3. **test cases**
+
+For detailed guidelines on how to contribute, please consult [CONTRIBUTING.md](docs/CONTRIBUTING.md)
 
 ## Installation
 
@@ -33,40 +35,7 @@ This repo collects common algorithms & data structures that are useful for inter
    uv sync --all-extras
    ```
 
-## Before Contributing
-
-Before making the first commit of the session, you should set up the **pre-commit** framework and activate the **virtual environment**. This has to be done for each new session.
-
-1. Start by activating the Python virtual environment:
-
-   ```bash
-   source .venv/bin/activate
-   ```
-
-2. Then, set up the pre-commit hooks:
-   ```bash
-   pre-commit install
-   ```
-
-## Contribution
-
-### Guidelines
-
-- **Coding Standards:**
-  Follow clean and consistent coding practices. Use meaningful variable and function names.
-
-- **Document Your Code:**
-  Ensure all functions have clear and concise comments/description.
-
-- **Test Your Changes:**
-  While we understand that fully testing this library may be challenging, ensure your code works as intended before submitting. Focus on edge cases and confirm that your changes integrate smoothly with existing functionality.
-
-- **Be Respectful**:
-  Engage in discussions respectfully and constructively.
-
-- **Follow The File Structure Templates**: Each Algorithm should have its own file in **scr** with: A README based on the template and the python file. Parallel to that you should create another file inside tests with a python file torun the tests and a YAML file to store the tests cases.
-
-### Bug Report
+## 🐛 Bug Report
 
 To report a bug, create a new issue with the **bug** tag. The severity of the bug should be included using the following emojis:
 
