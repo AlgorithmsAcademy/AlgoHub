@@ -23,11 +23,28 @@ This repo collects common algorithms & data structures that are useful for inter
 1. Install [uv](https://github.com/astral-sh/uv) - a fast Python package installer and resolver. See the [official documentation](https://github.com/astral-sh/uv#installation) for installation instructions.
 
 2. Clone the repository and setup the environment:
+
    ```bash
    git clone https://github.com/AlgorithmsAcademy/AlgoHub.git
-   cd AlgoHub
+   ```
+
+3. From the **git** repository synchronizes your Python environmen by executing the following command:
+   ```bash
    uv sync --all-extras
+   ```
+
+## Before Contributing
+
+Before doing the first commit of the sesion you should set up the **pre-commit** framework and activate activate the **virtual environment**. This as to be done for each new sesion.
+
+1. Start by activate the Python virtual environment:
+
+   ```bash
    source .venv/bin/activate
+   ```
+
+2. Then activate the **virtual environment**:
+   ```bash
    pre-commit install
    ```
 
@@ -47,6 +64,43 @@ This repo collects common algorithms & data structures that are useful for inter
 - **Be Respectful**:
   Engage in discussions respectfully and constructively.
 
-- **Follow The File Structure Template**: Each Algorithm should have its own file in **scr** with: A README based on the template and the python file. Parallel to that you should create another file inside tests with a python file torun the tests and a YAML file to store the tests cases.
+- **Follow The File Structure Templates**: Each Algorithm should have its own file in **scr** with: A README based on the template and the python file. Parallel to that you should create another file inside tests with a python file torun the tests and a YAML file to store the tests cases.
 
 ### Bug Report
+
+To report a bug, creat a new issue with the **bug** tag. The severity of the bug should be included using the following emojis:
+
+- 🔥 Blocker (can’t proceed)
+- 🛑 Major (big problem, workaround exists)
+- ⚠️ Minor (cosmetic or rare)
+- ❓ Not sure
+
+The name of the issue should match the folloeing template:
+
+```
+[severity_emojis Bug] name_of_the_algorithm
+```
+
+The description of the issue should match the following template:
+
+```
+# 🐛 Bug Report
+## Bug Description
+<!-- A clear and concise description of what the bug is. -->
+
+## To Reproduce
+Steps to reproduce the behavior:
+<!-- Enumarate all the steps to reproduce the bug. -->
+
+## Expected behavior
+<!-- A clear and concise description of what you expected to happen. -->
+
+## Environment (please complete the following information):
+<!-- Fill the following -->
+- Python version:
+- Environement Version:
+
+## Other
+<!-- If the report needs any other detail add it in this section. -->
+
+```
