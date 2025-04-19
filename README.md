@@ -28,22 +28,22 @@ This repo collects common algorithms & data structures that are useful for inter
    git clone https://github.com/AlgorithmsAcademy/AlgoHub.git
    ```
 
-3. From the **git** repository synchronizes your Python environmen by executing the following command:
+3. From the **git** repository synchronizes your Python environment by executing the following command:
    ```bash
    uv sync --all-extras
    ```
 
 ## Before Contributing
 
-Before doing the first commit of the sesion you should set up the **pre-commit** framework and activate activate the **virtual environment**. This as to be done for each new sesion.
+Before making the first commit of the session, you should set up the **pre-commit** framework and activate the **virtual environment**. This has to be done for each new session.
 
-1. Start by activate the Python virtual environment:
+1. Start by activating the Python virtual environment:
 
    ```bash
    source .venv/bin/activate
    ```
 
-2. Then activate the **virtual environment**:
+2. Then, set up the pre-commit hooks:
    ```bash
    pre-commit install
    ```
@@ -68,14 +68,14 @@ Before doing the first commit of the sesion you should set up the **pre-commit**
 
 ### Bug Report
 
-To report a bug, creat a new issue with the **bug** tag. The severity of the bug should be included using the following emojis:
+To report a bug, create a new issue with the **bug** tag. The severity of the bug should be included using the following emojis:
 
 - 🔥 Blocker (can’t proceed)
 - 🛑 Major (big problem, workaround exists)
 - ⚠️ Minor (cosmetic or rare)
 - ❓ Not sure
 
-The name of the issue should match the folloeing template:
+The name of the issue should match the following template:
 
 ```
 [severity_emojis Bug] name_of_the_algorithm
@@ -90,7 +90,7 @@ The description of the issue should match the following template:
 
 ## To Reproduce
 Steps to reproduce the behavior:
-<!-- Enumarate all the steps to reproduce the bug. -->
+<!-- Enumerate all the steps to reproduce the bug. -->
 
 ## Expected behavior
 <!-- A clear and concise description of what you expected to happen. -->
@@ -98,7 +98,7 @@ Steps to reproduce the behavior:
 ## Environment (please complete the following information):
 <!-- Fill the following -->
 - Python version:
-- Environement Version:
+- Environment Version:
 
 ## Other
 <!-- If the report needs any other detail add it in this section. -->
