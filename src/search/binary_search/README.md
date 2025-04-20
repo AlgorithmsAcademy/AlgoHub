@@ -17,7 +17,7 @@ The **space complexity** of binary search is **O(1)**, since there are no new sp
 
 ## 💡 Intuition
 
-To be filled.
+[To be filled]
 
 ## 🧾 Pseudocode
 
