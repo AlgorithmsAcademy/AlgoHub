@@ -8,12 +8,12 @@ def insertion_sort(array: list[Any]) -> list[Any]:
 
     Parameters
     ----------
-    array : List[Any]
+    array : list[Any]
         The list of comparable elements to sort.
 
     Returns
     -------
-    List[Any]
+    list[Any]
         The same list, sorted in ascending order.
 
     """
