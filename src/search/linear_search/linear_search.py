@@ -17,7 +17,7 @@ def linear_search(array: list[int], target: int) -> int:
         The same list, sorted in ascending order.
 
     """
-    for i in range(array):
+    for i in range(len(array)):
         if array[i] == target:
             return i
 
