@@ -103,6 +103,46 @@ The README.md inside the **New_Algorithm** folder should follow the following te
 <!-- Description + math -->
 ```
 
+### Data Structur README.md
+
+```
+#🧠 Data Structure Name
+## 📊 Visual Representation
+<!-- Add a visual representation of the data structure and how it operates. For example, a diagram of a stack showing how elements are added and removed, or a flowchart of a function like `push` or `pop`. -->
+
+## 📝 Description
+  <!-- Brief explanation of what the data structure is, its use case, and purpose. Keep it beginner-friendly. For example: "A stack is a linear data structure that follows the Last In First Out (LIFO) principle, where the last element added is the first one to be removed." -->
+## 💾 Time Complexity
+
+| Operation | Complexity |
+| --------- | ---------- |
+| Insertion | $O()$      |
+| Deletion  | $O()$      |
+| Access    | $O()$      |
+| Search    | $O()$      |
+
+## 💾 Space Complexity
+<!-- Describe the space complexity. Is it constant space or does it grow with the number of elements? For example: "The space complexity of a stack is $O(n)$, where $n$ is the number of elements stored in the stack." -->
+
+## 💡 Intuition By Analogy
+<!-- Describe the high-level idea behind how the data structure works. Use metaphors, visual cues, or simple reasoning to make it intuitive. For example, "Think of a stack as a stack of plates in a cafeteria. You can only add a plate on top or remove the top plate; you can't access the plates at the bottom until you remove the ones on top." -->
+
+## 🧾 Pseudocode
+<!-- Provide pseudocode for operations like insertion, deletion, or searching. Use loops, conditions, and indentation to mimic the logic flow. -->
+
+## 📈 Time Complexity Analysis
+ <!-- Break down the time complexity for the major operations. -->
+
+- **Insertion**:
+
+- **Deletion**:
+
+- **Access**:
+
+- **Search**:
+
+```
+
 ## 🐛 Bug Report
 
 To report a bug, create a new issue with the **bug** tag. The severity of the bug should be included using the following emojis:
