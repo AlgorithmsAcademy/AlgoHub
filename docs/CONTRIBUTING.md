@@ -84,7 +84,7 @@ The README.md inside the **New_Algorithm** folder should follow the following te
 ## 💾 Space Complexity
 <!-- Describe the space complexity. -->
 
-## 💡 Intuition
+## 💡 Intuition By Analogy
 <!-- Describe the high-level idea behind how the algorithm works. Use metaphors, visual cues, or simple reasoning to make it intuitive. -->
 
 ## 🧾 Pseudocode
@@ -93,13 +93,13 @@ The README.md inside the **New_Algorithm** folder should follow the following te
 ## 📈 Time Complexity Analysis
 <!-- Give a step-by-step breakdown of how you derive the time complexity. Include summation formulas, case analysis, and any assumptions. -->
 
-- ** Worst case **:
+- **Worst case**:
 <!-- Description + math if applicable -->
 
-- ** Best case **:
+- **Best case**:
 <!-- Description + math if applicable -->
 
-- ** Average case **:
+- **Average case**:
 <!-- Description + math -->
 ```
 
