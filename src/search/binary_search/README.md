@@ -9,44 +9,46 @@ Binary search is a divide and conquer algorithm that efficiently finds the posit
 | Case  | Complexity         |
 | ----- | ------------------ |
 | Best  | $O(1)$             |
-| Worst | $O(\text{log}(n))$ |
+| Worst | $O(\log(n))$ |
 
 ## 💾 Space Complexity
 
-The **space complexity** of binary search is **O(1)**, since there are no new space alocations.
+The algorithm is in-place, so the space complexity is $O(1)$.
 
 ## 💡 Intuition
 
-[To be filled]
+The algorithm is pretty straightforward. Since the array is sorted, we can leverage the order of elements to significantly reduce the search space. Instead of scanning each element one by one like linear search, we compare the middle element with the target:
+
+- If it's equal, we’re done.
+
+- If the target is smaller, we know it must lie in the left half.
+
+- If it's larger, we search the right half.
 
 ## 🧾 Pseudocode
 
 ```
-BinarySearch(array, element):
-    Set start to 0
-    Set end to length of array - 1
+binary_search(A[1 ... n], target):
+    start = 1 
+    end = n   
+    while start <= end:
+        mid = ⌊(start + end) / 2⌋
 
-    While start <= end
-        Set mid to (start + end) div 2
+        if A[mid] == target:
+            return mid
 
-        If array[mid] == element
-            Return mid
+        else if element < A[mid]:
+            end = mid - 1
 
-        Else If array[mid] > element
-            Set end to mid - 1
-
-        Else
-            Set start to mid + 1
-        End if
-    End loop
-
-    Return -1
+        else:
+            start = mid + 1
+    return -1
 ```
 
 ## 📈 Time Complexity Analysis
 
-- **Worst case**:
-  The worst case will be when the element is present in the first position. As seen in the average case, the comparison required to reach the first element is **log(N)**. So the time complexity for the worst case is **O(logN)**.
+- **Worst Case**:
+  In the worst case, the algorithm continues halving the array until only one element remains. This results in a logarithmic number of comparisons, specifically $\log_2 n$, but asymptotically we denote it as $O(\log n)$.
 
 - **Best case**:
   Best case is when the element is at the middle index of the array. It takes only one comparison to find the target element. So the best case complexity is O(1).
