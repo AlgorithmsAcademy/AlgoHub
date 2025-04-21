@@ -1,14 +1,14 @@
 """Binary Search Algorithm."""
 
 
-def binary_search(array: list[int], element: int) -> int:
+def binary_search(array: list[int], target: int) -> int:
     """In-place implementation of binary_search.
 
     Parameters
     ----------
     array : list[int]
         The list of comparable elements sorted in increasing order.
-    element : int
+    target : int
         The element to be searched.
 
     Returns
@@ -17,17 +17,17 @@ def binary_search(array: list[int], element: int) -> int:
         Returns the index of the element to be searched, or -1 if not found.
 
     """
-    return binary_search_recursive(array, element, 0, len(array) - 1)
+    return binary_search_recursive(array, target, 0, len(array) - 1)
 
 
-def binary_search_recursive(array: list[int], element: int, start: int, end: int) -> int:
+def binary_search_recursive(array: list[int], target: int, start: int, end: int) -> int:
     """Perform a recursive binary search.
 
     Parameters
     ----------
     array : list[int]
         The list of comparable elements sorted in increasing order.
-    element : int
+    target : int
         The element to be searched.
     start : int
         The index where the function starts the search.
@@ -45,8 +45,8 @@ def binary_search_recursive(array: list[int], element: int, start: int, end: int
 
     mid = (start + end) // 2
 
-    if array[mid] == element:
+    if array[mid] == target:
         return mid  # Element found
-    if array[mid] > element:
-        return binary_search_recursive(array, element, start, mid - 1)
-    return binary_search_recursive(array, element, mid + 1, end)
+    if array[mid] > target:
+        return binary_search_recursive(array, target, start, mid - 1)
+    return binary_search_recursive(array, target, mid + 1, end)
