@@ -17,8 +17,8 @@ def linear_search(array: list[int], target: int) -> int:
         The index of the target inside array.
 
     """
-    for i in range(len(array)):
-        if array[i] == target:
+    for i, elem in enumerate(array):
+        if elem == target:
             return i
 
     return -1
