@@ -14,7 +14,7 @@ def linear_search(array: list[int], target: int) -> int:
     Returns
     -------
     int :
-        The same list, sorted in ascending order.
+        The index of the target inside array.
 
     """
     for i in range(len(array)):
