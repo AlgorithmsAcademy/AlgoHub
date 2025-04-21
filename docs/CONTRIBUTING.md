@@ -51,6 +51,11 @@ When adding a new algorithm, follow this structure:
 AlgoHub/
 │
 ├── src/
+│   ├── new_data_structur
+|   |       └── new_data_structur/
+│   |                 ├── README.md        # Explanation and usage
+│   |                 ├── __init__.py
+│   |                 └── new_data_structur.py
 │   └── algorithm_type
 │       └── new_algorithm/
 │           ├── README.md        # Explanation and usage
@@ -58,11 +63,15 @@ AlgoHub/
 │           └── new_algorithm.py
 │
 ├── tests/
+|   ├── new_data_structur
+│   |       ├── test_new_data_structur.py
+│   |       ├── __init__.py
+│   |       └── test_cases.yaml
 │   └── algorithm_type
 │       └── your_algorithm/
 │           ├── test_new_algorithm.py
 │           ├── __init__.py
-│           └── cases.yaml       # Test cases
+│           └── test_cases.yaml       # Test cases
 
 ```
 
@@ -104,6 +113,8 @@ The README.md inside the **New_Algorithm** folder should follow the following te
 ```
 
 ### Data Structur README.md
+
+The README.md inside the **New_Data_Structur** folder should follow the following template.
 
 ```
 #🧠 Data Structure Name
