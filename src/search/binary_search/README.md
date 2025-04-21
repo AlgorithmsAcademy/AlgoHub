@@ -6,16 +6,16 @@ Binary search is a divide and conquer algorithm that efficiently finds the posit
 
 ## 💾 Time Complexity
 
-| Case  | Complexity         |
-| ----- | ------------------ |
-| Best  | $O(1)$             |
+| Case  | Complexity   |
+| ----- | ------------ |
+| Best  | $O(1)$       |
 | Worst | $O(\log(n))$ |
 
 ## 💾 Space Complexity
 
 The algorithm is in-place, so the space complexity is $O(1)$.
 
-## 💡 Intuition
+## 💡 Intuition By Analogy
 
 The algorithm is pretty straightforward. Since the array is sorted, we can leverage the order of elements to significantly reduce the search space. Instead of scanning each element one by one like linear search, we compare the middle element with the target:
 
@@ -29,8 +29,8 @@ The algorithm is pretty straightforward. Since the array is sorted, we can lever
 
 ```
 binary_search(A[1 ... n], target):
-    start = 1 
-    end = n   
+    start = 1
+    end = n
     while start <= end:
         mid = ⌊(start + end) / 2⌋
 

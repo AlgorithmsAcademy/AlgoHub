@@ -15,7 +15,7 @@ Bubble Sort is simple comparison-based sorting algorithm, but not the most effic
 
 The algorithm is in-place, so the space complexity is $O(1)$.
 
-## 💡 Intuition
+## 💡 Intuition By Analogy
 
 The idea is that during each iteration, the largest unsorted element is moved to its correct position at the right hand side of the array. After the first pass, the largest element is in place; after the second, the second largest, and so on. This continues until the array is sorted.
 

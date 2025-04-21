@@ -17,7 +17,7 @@ It builds the final sorted array one item at a time, much like how you might sor
 
 The algorithm is in-place, so the space complexity is $O(1)$.
 
-## 💡 Intuition
+## 💡 Intuition By Analogy
 
 The idea is to think of it like sorting a hand of playing cards as you receive them:
 
