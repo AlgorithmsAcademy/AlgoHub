@@ -72,12 +72,12 @@ def merge(array: list[Any], p: int, q: int, r: int) -> None:
             j += 1
         k += 1
 
-    while i < len(left):
+    while i < n1:
         array[k] = left[i]
         i += 1
         k += 1
 
-    while j < len(right):
+    while j < n2:
         array[k] = right[j]
         j += 1
         k += 1
