@@ -14,43 +14,70 @@ def merge_sort(array: list[Any]) -> list[Any]:
     Returns
     -------
     list[Any]
-        A new list, sorted in ascending order.
+        The same list but sorted in increasing order.
 
     """
-    n = len(array)
-    if n <= 1:
-        return array
-    q = n // 2
-    return merge(merge_sort(array[:q]), merge_sort(array[q:]))
+    _merge_sort(array, 0, len(array) - 1)
+    return array
 
-
-def merge(left: list[Any], right: list[Any]) -> list[Any]:
-    """Merge two sorted lists into a single sorted list.
+def _merge_sort(array: list[Any], p: int, r: int) -> None:
+    """Sorts the input array (from p to r) using the merge sort algorithm.
 
     Parameters
     ----------
-    left : list[Any]
-        The first sorted list.
-    right: list[Any]
-        The second sorted list.
-
-    Returns
-    -------
-    list[Any]
-        A new list that has merged left and right.
+    array : list[Any]
+        The list of comparable elements to sort.
+    p : int
+        Start index.
+    r : int
+        End index.
 
     """
+    if p < r:
+        q = (p + r) // 2
+        _merge_sort(array, p, q)
+        _merge_sort(array, q + 1, r)
+        merge(array, p, q, r)
+
+def merge(array: list[Any], p: int, q: int, r: int) -> None:
+    """Merge the two sorted subarrays array[p..q] and array[q+1..r] into a single sorted subarray.
+
+    Parameters
+    ----------
+    array : list[Any]
+        The list where merging will occur.
+    p : int
+        Start index.
+    q : int
+        Middle index.
+    r : int
+        End index.
+
+    """
+    left = array[p:q+1]
+    right = array[q+1:r+1]
+
     n1 = len(left)
     n2 = len(right)
-    res = []
+
     i = j = 0
+    k = p
+
     while i < n1 and j < n2:
-        if left[i] < right[j]:
-            res.append(left[i])
+        if left[i] <= right[j]:
+            array[k] = left[i]
             i += 1
         else:
-            res.append(right[j])
+            array[k] = right[j]
             j += 1
-    res.extend(left[i:])
-    res.extend(right[j:])
-    return res
+        k += 1
+
+    while i < len(left):
+        array[k] = left[i]
+        i += 1
+        k += 1
+
+    while j < len(right):
+        array[k] = right[j]
+        j += 1
+        k += 1
