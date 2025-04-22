@@ -3,9 +3,10 @@ name = "algo-hub"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13.0"
+requires-python = ">=3.12.9, <3.13.0"
 dependencies = [
     "pre-commit>=4.2.0",
+    "rich>=14.0.0",
 ]
 
 [dependency-groups]
@@ -56,6 +57,8 @@ target-version = "py313"
 select = ["ALL"]
 ignore = ["D203", "D213", "COM812", "TRY300", "PD901"]
 
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["S101", "D"]
 
 [tool.ruff.format]
 quote-style = "double"
