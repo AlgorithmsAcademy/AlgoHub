@@ -1,0 +1,20 @@
+name: Implement Algorithm
+description: Implement a {Algo_Name}.
+title: ✨ Implement {Algo_Name}   # Placeholder for the user to edit
+labels: [Algo_Name]
+
+body:
+- type: input
+  id: prevalence
+  attributes:
+    label: Algo_Name
+    description: Replace the spaces by an underscore and all the caracters should be in lower case.
+    placeholder: 'Example: bubble_bort, dijkstra'
+  validations:
+    required: true
+
+- type: checkboxes
+  attributes:
+    label: Is a Milestone
+    options:
+    - label: Milestone
