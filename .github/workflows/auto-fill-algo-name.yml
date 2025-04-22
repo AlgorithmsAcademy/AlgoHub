@@ -1,0 +1,30 @@
+name: Auto-fill Issue_Name
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  update-issue:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Extract Algo_Name
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const body = context.payload.issue.body;
+
+          // Use regex to find the algo_name field
+          const algoRegex = /"algo_name":"(.*?)"/;
+          const match = algoRegex.exec(JSON.stringify(body));
+          if (!match) return;
+
+          const algoName = match[1];
+          const issueNumber = context.issue.number;
+
+          // Update the issue title
+          await github.rest.issues.update({
+            ...context.repo,
+            issue_number: issueNumber,
+            title: `✨ Implement ${algoName}`
+          });
