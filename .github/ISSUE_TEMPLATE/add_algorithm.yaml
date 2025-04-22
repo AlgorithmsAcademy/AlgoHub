@@ -15,5 +15,6 @@ body:
 
 - type: checkboxes
   attributes:
+    label: Checkboxs
     options:
     - label: Is a Milestone
