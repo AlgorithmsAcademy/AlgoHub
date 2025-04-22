@@ -1,0 +1,1 @@
+"""Stack data structure implementation."""

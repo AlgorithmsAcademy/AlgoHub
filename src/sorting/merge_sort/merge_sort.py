@@ -20,6 +20,7 @@ def merge_sort(array: list[Any]) -> list[Any]:
     _merge_sort(array, 0, len(array) - 1)
     return array
 
+
 def _merge_sort(array: list[Any], p: int, r: int) -> None:
     """Sorts the input array (from p to r) using the merge sort algorithm.
 
@@ -39,6 +40,7 @@ def _merge_sort(array: list[Any], p: int, r: int) -> None:
         _merge_sort(array, q + 1, r)
         merge(array, p, q, r)
 
+
 def merge(array: list[Any], p: int, q: int, r: int) -> None:
     """Merge the two sorted subarrays array[p..q] and array[q+1..r] into a single sorted subarray.
 
@@ -54,8 +56,8 @@ def merge(array: list[Any], p: int, q: int, r: int) -> None:
         End index.
 
     """
-    left = array[p:q+1]
-    right = array[q+1:r+1]
+    left = array[p : q + 1]
+    right = array[q + 1 : r + 1]
 
     n1 = len(left)
     n2 = len(right)
