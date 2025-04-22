@@ -1,6 +1,6 @@
 name: Implement Algorithm
 description: Implement a new algorithm.
-title: ✨ Implement {Algo_Name}    # This is a placeholder; will be replaced by GitHub Actionslabels: [enhancement]
+title: <the name will be auto fill>   # This is a placeholder; will be replaced by GitHub Actionslabels: [enhancement]
 
 body:
 - type: input
