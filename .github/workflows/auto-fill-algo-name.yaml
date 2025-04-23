@@ -19,7 +19,7 @@ jobs:
           console.log("Issue Body:\n", issueBody);
 
           // Match the content under the "### Algo_Name" section
-          const match = /### Algo_Name\s+(.+?)\s+(###|$)/s.exec(issueBody);
+          const match = /### Algo_Name\s*\n+(.+?)(\n+###|\n*$)/s.exec(issueBody);
           if (!match) {
             console.log("🚫 Could not find algo name in Markdown.");
             return;
