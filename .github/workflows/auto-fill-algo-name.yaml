@@ -11,16 +11,17 @@ jobs:
   update-issue-title:
     runs-on: ubuntu-latest
     steps:
-    - name: Parse template and update title
+    - name: Parse input and update issue title
       uses: actions/github-script@v7
       with:
         script: |
           const issueBody = context.payload.issue.body;
           console.log("Issue Body:\n", issueBody);
 
+          // Extract the field from the JSON-formatted body using its label
           const getField = (label) => {
             const match = new RegExp(`${label}":\\s*"([^"]+)`).exec(JSON.stringify(issueBody));
-            return match ? match[1] : null;
+            return match ? match[1].trim() : null;
           };
 
           const algoName = getField("Algo_Name");
@@ -29,8 +30,8 @@ jobs:
             return;
           }
 
-          const newTitle = `✨ Implement ${algoName}`;
           const issueNumber = context.issue.number;
+          const newTitle = `✨ Implement ${algoName}`;
 
           console.log(`✅ Extracted algo name: ${algoName}`);
           console.log(`🔧 Updating issue title to: ${newTitle}`);
