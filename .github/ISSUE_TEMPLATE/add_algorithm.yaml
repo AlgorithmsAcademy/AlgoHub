@@ -4,7 +4,7 @@ title: <the name will be auto fill>   # This is a placeholder; will be replaced 
 
 body:
 - type: input
-  id: algo_name  # ✅ This must match exactly
+  id: Algo_name  # ✅ This must match exactly
   attributes:
     label: Algo_Name
     description: Replace spaces with underscores and use lowercase.
