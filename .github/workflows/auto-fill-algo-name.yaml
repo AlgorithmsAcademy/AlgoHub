@@ -1,4 +1,4 @@
-name: Auto-fill Issue_Name
+name: Auto-fill Algorithm Title
 
 on:
   issues:
