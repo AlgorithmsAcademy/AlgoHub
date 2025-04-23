@@ -19,8 +19,8 @@ jobs:
           const match = algoRegex.exec(JSON.stringify(body));
           if (!match) return;
 
-          const algoName = match[1];
-          const issueNumber = "helloworld";//context.issue.number;
+          const algoName = "helloworld";//match[1];
+          const issueNumber = context.issue.number;
 
           // Update the issue title
           await github.rest.issues.update({
