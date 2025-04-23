@@ -1,12 +1,13 @@
 name: Implement Algorithm
 description: Implement a new algorithm.
-title: <the name will be auto fill>   # This is a placeholder; will be replaced by GitHub Actionslabels: [enhancement]
+title: <leave empty>  # Will be replaced by GitHub Actions
+labels: [enhancement]
 
 body:
 - type: input
-  id: Algo_name  # ✅ This must match exactly
+  id: algo_name    # This can be anything, but `label` must match Action
   attributes:
-    label: Algo_Name
+    label: Algo_Name    # This must exactly match what's used in your action script
     description: Replace spaces with underscores and use lowercase.
     placeholder: 'Example: bubble_sort'
   validations:
