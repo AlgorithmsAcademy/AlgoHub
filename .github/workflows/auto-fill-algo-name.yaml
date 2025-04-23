@@ -4,27 +4,35 @@ on:
   issues:
     types: [opened]
 
+permissions:
+  issues: write
+
 jobs:
-  update-issue:
+  update-issue-title:
     runs-on: ubuntu-latest
     steps:
-    - name: Extract Algo_Name
-      uses: actions/github-script@v7
-      with:
-        script: |
-          const body = context.payload.issue.body;
+      - name: Debug and Update Title
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueBody = context.payload.issue.body;
+            console.log("Issue Body:");
+            console.log(issueBody);
 
-          // Use regex to find the algo_name field
-          const algoRegex = /"algo_name":"(.*?)"/;
-          const match = algoRegex.exec(JSON.stringify(body));
-          if (!match) return;
+            const match = /"algo_name":"(.*?)"/.exec(JSON.stringify(issueBody));
+            if (!match) {
+              console.log("🚫 No algo_name match found in issue body.");
+              return;
+            }
 
-          const algoName = "helloworld";//match[1];
-          const issueNumber = context.issue.number;
+            const algoName = match[1];
+            const issueNumber = context.issue.number;
+            const newTitle = `✨ Implement ${algoName}`;
+            console.log(`✅ Found algo_name: ${algoName}`);
+            console.log(`🔧 Updating issue #${issueNumber} title to: ${newTitle}`);
 
-          // Update the issue title
-          await github.rest.issues.update({
-            ...context.repo,
-            issue_number: issueNumber,
-            title: `✨ Implement ${algoName}`
-          });
+            await github.rest.issues.update({
+              ...context.repo,
+              issue_number: issueNumber,
+              title: newTitle
+            });
