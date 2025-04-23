@@ -11,7 +11,7 @@ jobs:
   update-issue-title:
     runs-on: ubuntu-latest
     steps:
-      - name: Debug and Update Title
+      - name: Debug and Update Title(algo)
         uses: actions/github-script@v7
         with:
           script: |
