@@ -37,39 +37,5 @@ For detailed guidelines on how to contribute, please consult [CONTRIBUTING.md](d
 
 ## 🐛 Bug Report
 
-To report a bug, create a new issue with the **bug** tag. The severity of the bug should be included using the following emojis:
-
-- 🔥 Blocker (can’t proceed)
-- 🛑 Major (big problem, workaround exists)
-- ⚠️ Minor (cosmetic or rare)
-- ❓ Not sure
-
-The name of the issue should match the following template:
-
-```
-[severity_emojis Bug] name_of_the_algorithm
-```
-
-The description of the issue should match the following template:
-
-```
-# 🐛 Bug Report
-## Bug Description
-<!-- A clear and concise description of what the bug is. -->
-
-## To Reproduce
-Steps to reproduce the behavior:
-<!-- Enumerate all the steps to reproduce the bug. -->
-
-## Expected behavior
-<!-- A clear and concise description of what you expected to happen. -->
-
-## Environment (please complete the following information):
-<!-- Fill the following -->
-- Python version:
-- Environment Version:
-
-## Other
-<!-- If the report needs any other detail add it in this section. -->
-
-```
+To report a bug, simply create a new issue using the **Bug Report** form and fill out all sections.
+The form is straightforward, but if you’d like a bit more guidance consult [CONTRIBUTING.md](docs/CONTRIBUTING.md).

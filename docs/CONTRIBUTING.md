@@ -156,39 +156,31 @@ The README.md inside the **New_Data_Structure** folder should follow the followi
 
 ## 🐛 Bug Report
 
-To report a bug, create a new issue with the **bug** tag. The severity of the bug should be included using the following emojis:
+To report a bug, simply create a new issue using the **Bug Report** form and fill out all sections.
+The form is straightforward, but if you’d like a bit more guidance, follow the steps below. 👇
 
-- 🔥 Blocker (can’t proceed)
-- 🛑 Major (big problem, workaround exists)
-- ⚠️ Minor (cosmetic or rare)
-- ❓ Not sure
+### 📝 Steps to Report a Bug
 
-The name of the issue should match the following template:
+1. **Enter a clear, short title**
+   Use a short, clear title that describes the issue.
 
-```
-[severity_emojis Bug] name_of_the_algorithm
-```
+   > Example: `Crash when clicking the login button`
 
-The description of the issue should match the following template:
+2. **Choose how serious the issue is (severity):**
 
-```
-# 🐛 Bug Report
-## Bug Description
-<!-- A clear and concise description of what the bug is. -->
+- 🔥 Blocker – Completely breaks core functionality
+- 🛑 Major – Important features aren’t working
+- ⚠️ Minor – Small issues or annoyances
+- ❓ Not sure – You’re unsure how bad it is
 
-## To Reproduce
-Steps to reproduce the behavior:
-<!-- Enumerate all the steps to reproduce the bug. -->
+3. **In the Steps to Reproduce & What Happens section:**
 
-## Expected behavior
-<!-- A clear and concise description of what you expected to happen. -->
+- List step-by-step instructions to trigger the bug
+- Describe what actually happens
 
-## Environment (please complete the following information):
-<!-- Fill the following -->
-- Python version:
-- Environment Version:
+4. **Describe what you expected to happen(Expected Behavior):**
+   In the Expected Behavior section, explain what you thought would happen instead.
 
-## Other
-<!-- If the report needs any other detail add it in this section. -->
-
-```
+5. **Create the issue:**
+   Once you create the issue, our system will automatically format the title.
+   This formatting takes about 4 seconds.

@@ -1,6 +1,6 @@
 version = 1
 revision = 1
-requires-python = ">=3.12.0, <3.13.0"
+requires-python = ">=3.12.9, <3.13.0"
 
 [[package]]
 name = "algo-hub"
