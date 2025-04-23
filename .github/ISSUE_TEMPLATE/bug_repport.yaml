@@ -1,6 +1,6 @@
 name: Bug Report
 description: File a bug report.
-title: '{severity_icon} [Bug]: {bug_title}' # Placeholder for the user to edit
+title: '' # Placeholder for the user to edit
 labels: [bug]
 
 body:
