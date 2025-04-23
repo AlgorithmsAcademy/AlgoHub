@@ -26,5 +26,5 @@ jobs:
           await github.rest.issues.update({
             ...context.repo,
             issue_number: issueNumber,
-            title: `✨ Implement ${algoName}$
+            title: `✨ Implement ${algoName}`
           });
