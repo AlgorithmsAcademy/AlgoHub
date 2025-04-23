@@ -11,8 +11,3 @@ body:
     placeholder: 'Example: bubble_sort'
   validations:
     required: true
-
-- type: textarea
-  attributes:
-    label: Other
-    placeholder: If the issue needs any other detail add it in this section.

@@ -1,6 +1,6 @@
 name: Bug Report
 description: File a bug report.
-title: 'Enter a short title that describe the issue' # Placeholder for the user to edit
+title: 'Enter a short title that describes the issue' # Placeholder for the user to edit
 labels: [bug]
 
 body:
@@ -18,7 +18,7 @@ body:
 
 - type: textarea
   attributes:
-    label: To Reproduce
+    label: Steps to Reproduce & What Happens
     placeholder: Enumerate all the steps to reproduce the bug.
   validations:
     required: true
@@ -29,8 +29,3 @@ body:
     placeholder: A clear and concise description of what you expected to happen.
   validations:
     required: true
-
-- type: textarea
-  attributes:
-    label: Other
-    placeholder: If the report needs any other detail add it in this section.
