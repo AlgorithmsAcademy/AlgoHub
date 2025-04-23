@@ -1,10 +1,11 @@
 name: Implement Algorithm
 description: Implement a new algorithm.
-title: <the name will be auto fill>   # This is a placeholder; will be replaced by GitHub Actionslabels: [enhancement]
+title: <Leave this empty>
+labels: [enhancement]
 
 body:
 - type: input
-  id: Algo_name  # ✅ This must match exactly
+  id: Algo_name
   attributes:
     label: Algo_Name
     description: Replace spaces with underscores and use lowercase.
