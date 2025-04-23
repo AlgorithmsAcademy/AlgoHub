@@ -4,39 +4,50 @@ on:
   issues:
     types: [opened]
 
+permissions:
+  issues: write
+
 jobs:
   update-issue-title:
     runs-on: ubuntu-latest
     steps:
-    - name: Format Title from Severity and Bug Title
-      uses: actions/github-script@v7
-      with:
-        script: |
-          const body = context.payload.issue.body;
+      - name: Extract severity and bug title from Markdown
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body;
+            console.log("Issue Body:\n", body);
 
-          const getField = (label) => {
-            const match = new RegExp(`${label}":"([^"]+)`).exec(JSON.stringify(body));
-            return match ? match[1] : null;
-          };
+            const severityMatch = /### Severity\s+(.+?)\s+(###|$)/s.exec(body);
+            const severity = severityMatch ? severityMatch[1].trim() : null;
 
-          const severityMap = {
-            "🔥 Blocker": "🔥",
-            "🛑 Major": "🛑",
-            "⚠️ Minor": "⚠️",
-            "❓ Not sure": "❓"
-          };
+            const rawTitle = context.payload.issue.title;
 
-          let severity = getField('severity');
-          const severityIcon = severityMap[severity] || "❓"; // fallback to ❓
+            if (!severityMatch) {
+              console.log("🚫 Could not find severity in Markdown.");
+              return;
+            }
 
-          const bugTitle = getField('bug_title');
-          if (!severity || !bugTitle) return;
+            const severityMap = {
+              "🔥 Blocker": "🔥",
+              "🛑 Major": "🛑",
+              "⚠️ Minor": "⚠️",
+              "❓ Not sure": "❓"
+            };
+            const severityIcon = severityMap[severity] || "❓";
 
-          const issueNumber = context.issue.number;
+            if (rawTitle.startsWith("🔥") || rawTitle.startsWith("🛑") || rawTitle.startsWith("⚠️") || rawTitle.startsWith("❓")) {
+              console.log("✅ Title already formatted correctly.");
+              return;
+            }
 
-          // Update the issue title
-          await github.rest.issues.update({
-            ...context.repo,
-            issue_number: issueNumber,
-            title: `${severityIcon} [Bug]: ${bugTitle}`
-          });
+            const issueNumber = context.issue.number;
+            const updatedTitle = `${severityIcon} [Bug]: ${rawTitle}`;
+
+            console.log(`✅ Updating title to: ${updatedTitle}`);
+
+            await github.rest.issues.update({
+              ...context.repo,
+              issue_number: issueNumber,
+              title: updatedTitle
+            });
