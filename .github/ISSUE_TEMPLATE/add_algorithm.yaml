@@ -12,9 +12,7 @@ body:
   validations:
     required: true
 
-- type: checkboxes
-  id: milestone
+- type: textarea
   attributes:
-    label: Options
-    options:
-    - label: Is a Milestone.
+    label: Other
+    placeholder: If the issue needs any other detail add it in this section.
