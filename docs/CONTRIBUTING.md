@@ -28,7 +28,11 @@ We welcome all kinds of contributions—whether you're fixing bugs, improving do
 
 - **Follow The File Structure Templates**: Each Algorithm should have its own file in **scr** with: A README based on the template and the python file. Parallel to that you should create another file inside tests with a python file torun the tests and a YAML file to store the tests cases.
 
-## Before Contributing
+## How to contribut
+
+Every change in the repository should be merged throught [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+
+### Before Contributing
 
 Before making the first commit of the session, you should set up the **pre-commit** framework and activate the **virtual environment**. This has to be done for each new session.
 
@@ -42,6 +46,18 @@ Before making the first commit of the session, you should set up the **pre-commi
    ```bash
    pre-commit install
    ```
+
+### Implementing a new algorithm
+
+Before implementing a new algorithm. The Python virtual environment should include [rich](https://pypi.org/project/rich/) and [pytest](https://pypi.org/project/pytest/). In order to do it, run the commend below.
+
+```bash
+pip install -r requirements.txt
+```
+
+Every algorithm implementation should have a dedicated **issue**. This issue should be build with the **Implement Algorithm** issue form. If no issue exist for the specific algorithm to be implemented create one.
+
+Every file inside the new repository should follow the file structure inside [File Structure](## 📁 File Structure) section.
 
 ## 📁 File Structure
 
