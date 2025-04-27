@@ -57,7 +57,7 @@ pip install -r requirements.txt
 
 Every algorithm implementation should have a dedicated **issue**. This issue should be build with the **Implement Algorithm** issue form. If no issue exist for the specific algorithm to be implemented create one.
 
-Every file inside the new repository should follow the file structure inside [File Structure](## 📁 File Structure) section.
+Every file inside the new repository should follow the file structure inside [File Structure](#📁-File-Structure) section.
 
 ## 📁 File Structure
 
