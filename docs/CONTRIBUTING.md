@@ -12,25 +12,9 @@ We welcome all kinds of contributions—whether you're fixing bugs, improving do
 - Add test cases or enhance test coverage
 - Fix typos
 
-## Guidelines
-
-- **Coding Standards:**
-  Follow clean and consistent coding practices. Use meaningful variable and function names.
-
-- **Document Your Code:**
-  Ensure all functions have clear and concise comments/description.
-
-- **Test Your Changes:**
-  While we understand that fully testing this library may be challenging, ensure your code works as intended before submitting. Focus on edge cases and confirm that your changes integrate smoothly with existing functionality.
-
-- **Be Respectful**:
-  Engage in discussions respectfully and constructively.
-
-- **Follow The File Structure Templates**: Each Algorithm should have its own file in **scr** with: A README based on the template and the python file. Parallel to that you should create another file inside tests with a python file torun the tests and a YAML file to store the tests cases.
-
 ## How to contribut
 
-Every change in the repository should be merged throught [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+Every change in the repository should be merged throught [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). All commit execute [Ruff](https://docs.astral.sh/ruff/) to insure the some level of coding standart.
 
 ### Before Contributing
 
