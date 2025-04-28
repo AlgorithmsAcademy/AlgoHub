@@ -10,7 +10,7 @@ We welcome all kinds of contributions—whether you're fixing bugs, improving do
 - Improve or correct existing implementations
 - Write or update documentation
 - Add test cases or enhance test coverage
-- Fix typos or bugs
+- Fix typos
 
 ## Guidelines
 
@@ -55,9 +55,42 @@ Before implementing a new algorithm. The Python virtual environment should inclu
 pip install -r requirements.txt
 ```
 
-Every algorithm implementation should have a dedicated **issue**. This issue should be build with the **Implement Algorithm** issue form. If no issue exist for the specific algorithm to be implemented create one.
+Every algorithm implementation should have a dedicated **issue**. This issue should be build with the **Implement Algorithm** issue form. If no issue exist for the specific algorithm to be implemented create one. Every file inside the new repository and the **test file** should follow the file structure inside [File Structure](#📁-file-structure) section.
 
-Every file inside the new repository should follow the file structure inside [File Structure](#📁-File-Structure) section.
+All algorithm should be accompanied with a **README.md** file. This file should follow the template in the [Algorithm README.md](#algorithm-readme) section.
+
+Every algorithm should be tested using [pytest](https://docs.pytest.org/en/stable/).
+
+## 🐛 Bug Report
+
+To report a bug, simply create a new issue using the **Bug Report** form and fill out all sections.
+The form is straightforward, but if you’d like a bit more guidance, follow the steps below. 👇
+
+### 📝 Steps to Report a Bug
+
+1. **Enter a clear, short title**
+   Use a short, clear title that describes the issue.
+
+   > Example: `Crash when clicking the login button`
+
+2. **Choose how serious the issue is (severity):**
+
+- 🔥 Blocker – Completely breaks core functionality
+- 🛑 Major – Important features aren’t working
+- ⚠️ Minor – Small issues or annoyances
+- ❓ Not sure – You’re unsure how bad it is
+
+3. **In the Steps to Reproduce & What Happens section:**
+
+- List step-by-step instructions to trigger the bug
+- Describe what actually happens
+
+4. **Describe what you expected to happen(Expected Behavior):**
+   In the Expected Behavior section, explain what you thought would happen instead.
+
+5. **Create the issue:**
+   Once you create the issue, our system will automatically format the title.
+   This formatting takes about 4 seconds.
 
 ## 📁 File Structure
 
@@ -91,7 +124,7 @@ AlgoHub/
 
 ```
 
-### Algorithm README.md
+### Algorithm README
 
 The README.md inside the **New_Algorithm** folder should follow the following template.
 
@@ -169,34 +202,3 @@ The README.md inside the **New_Data_Structure** folder should follow the followi
 - **Search**:
 
 ```
-
-## 🐛 Bug Report
-
-To report a bug, simply create a new issue using the **Bug Report** form and fill out all sections.
-The form is straightforward, but if you’d like a bit more guidance, follow the steps below. 👇
-
-### 📝 Steps to Report a Bug
-
-1. **Enter a clear, short title**
-   Use a short, clear title that describes the issue.
-
-   > Example: `Crash when clicking the login button`
-
-2. **Choose how serious the issue is (severity):**
-
-- 🔥 Blocker – Completely breaks core functionality
-- 🛑 Major – Important features aren’t working
-- ⚠️ Minor – Small issues or annoyances
-- ❓ Not sure – You’re unsure how bad it is
-
-3. **In the Steps to Reproduce & What Happens section:**
-
-- List step-by-step instructions to trigger the bug
-- Describe what actually happens
-
-4. **Describe what you expected to happen(Expected Behavior):**
-   In the Expected Behavior section, explain what you thought would happen instead.
-
-5. **Create the issue:**
-   Once you create the issue, our system will automatically format the title.
-   This formatting takes about 4 seconds.
