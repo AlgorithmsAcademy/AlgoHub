@@ -6,6 +6,7 @@ We welcome all kinds of contributions—whether you're fixing bugs, improving do
 
 ## ✅ What you can contribute
 
+- Report bug
 - Add a new algorithm or data structure
 - Improve or correct existing implementations
 - Write or update documentation
