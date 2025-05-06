@@ -6,29 +6,18 @@ We welcome all kinds of contributions—whether you're fixing bugs, improving do
 
 ## ✅ What you can contribute
 
+- Report bug
 - Add a new algorithm or data structure
 - Improve or correct existing implementations
 - Write or update documentation
 - Add test cases or enhance test coverage
-- Fix typos or bugs
+- Fix typos
 
-## Guidelines
+## How to contribut
 
-- **Coding Standards:**
-  Follow clean and consistent coding practices. Use meaningful variable and function names.
+Every change in the repository should be merged through [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). All commit execute [Ruff](https://docs.astral.sh/ruff/) to insure some level of coding standard.
 
-- **Document Your Code:**
-  Ensure all functions have clear and concise comments/description.
-
-- **Test Your Changes:**
-  While we understand that fully testing this library may be challenging, ensure your code works as intended before submitting. Focus on edge cases and confirm that your changes integrate smoothly with existing functionality.
-
-- **Be Respectful**:
-  Engage in discussions respectfully and constructively.
-
-- **Follow The File Structure Templates**: Each Algorithm should have its own file in **scr** with: A README based on the template and the python file. Parallel to that you should create another file inside tests with a python file torun the tests and a YAML file to store the tests cases.
-
-## Before Contributing
+### Before Contributing
 
 Before making the first commit of the session, you should set up the **pre-commit** framework and activate the **virtual environment**. This has to be done for each new session.
 
@@ -42,6 +31,53 @@ Before making the first commit of the session, you should set up the **pre-commi
    ```bash
    pre-commit install
    ```
+
+### Implementing a new algorithm
+
+Before implementing a new algorithm. The Python virtual environment should include [rich](https://pypi.org/project/rich/) and [pytest](https://pypi.org/project/pytest/). From the cloned repository run the command below for a quick installation.
+
+```bash
+pip install -r requirements.txt
+```
+
+Every algorithm implementation should have a dedicated **issue**. This issue should be built with the **Implement Algorithm** issue form. If no issue exists for the specific algorithm to be implemented create one. Every file inside the new repository and the **test file** should follow the file structure inside [File Structure](#📁-file-structure) section.
+
+All algorithm should be accompanied with a **README.md** file. This file should follow the template in the [Algorithm README.md](#algorithm-readme) section.
+
+Every algorithm should be tested using [pytest](https://docs.pytest.org/en/stable/).
+
+## 🐛 Bug Report
+
+To report a bug, simply create a new issue using the **Bug Report** form and fill out all sections.
+The form is straightforward, but if you’d like a bit more guidance, follow the steps below. 👇
+
+### 📝 Steps to Report a Bug
+
+1. **Enter a clear, short title**
+   Use a short, clear title that describes the issue.
+
+   > Example: `Crash when clicking the login button`
+
+2. **What type of issue is this? (Bug Type)**
+
+- 🧮 Algorithm Implementation - The logic or output of an algorithm is incorrect.
+- 🛠 CI/Tooling Issue - Problems with continuous integration or scripts.
+- 📘 Algorithm Documentation - Missing or incorrect explanations/comments for an algorithm.
+- 🖋 General Documentation - Typos, formatting, or missing information inside documentation that is not related to an algorithm.
+- 🧪 Test Failure or Adding Testcase - Broken tests or missing edge case coverage.
+- ❓ Other / Not Sure - You’re unsure how bad it is or some other kind of issue.
+
+3. **In the Steps to Reproduce & What Happens section:**
+
+- List step-by-step instructions to trigger the bug
+- Describe what actually happens
+
+4. **Describe what you expected to happen(Expected Behavior):**
+   In the Expected Behavior section, explain what you thought would happen instead.
+
+5. **Create the issue:**
+   Once you create the issue, our system will automatically format the title.
+   This formatting takes about 4 seconds.
 
 ## 📁 File Structure
 
@@ -70,12 +106,11 @@ AlgoHub/
 │   └── algorithm_type
 │       └── your_algorithm/
 │           ├── test_new_algorithm.py
-│           ├── __init__.py
-│           └── test_cases.yaml       # Test cases
+│           └── __init__.py
 
 ```
 
-### Algorithm README.md
+### Algorithm README
 
 The README.md inside the **New_Algorithm** folder should follow the following template.
 
@@ -153,34 +188,3 @@ The README.md inside the **New_Data_Structure** folder should follow the followi
 - **Search**:
 
 ```
-
-## 🐛 Bug Report
-
-To report a bug, simply create a new issue using the **Bug Report** form and fill out all sections.
-The form is straightforward, but if you’d like a bit more guidance, follow the steps below. 👇
-
-### 📝 Steps to Report a Bug
-
-1. **Enter a clear, short title**
-   Use a short, clear title that describes the issue.
-
-   > Example: `Crash when clicking the login button`
-
-2. **Choose how serious the issue is (severity):**
-
-- 🔥 Blocker – Completely breaks core functionality
-- 🛑 Major – Important features aren’t working
-- ⚠️ Minor – Small issues or annoyances
-- ❓ Not sure – You’re unsure how bad it is
-
-3. **In the Steps to Reproduce & What Happens section:**
-
-- List step-by-step instructions to trigger the bug
-- Describe what actually happens
-
-4. **Describe what you expected to happen(Expected Behavior):**
-   In the Expected Behavior section, explain what you thought would happen instead.
-
-5. **Create the issue:**
-   Once you create the issue, our system will automatically format the title.
-   This formatting takes about 4 seconds.

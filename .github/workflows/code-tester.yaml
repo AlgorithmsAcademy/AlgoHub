@@ -1,0 +1,31 @@
+name: Code Tester
+
+on: [pull_request]
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+
+    - name: Download Repo In Docker
+      uses: actions/checkout@v4
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@v5
+      with:
+        enable-cache: true
+        cache-dependency-glob: uv.lock
+
+    - name: Install the project
+      run: uv sync --locked --all-extras --dev
+
+    - name: Run tests
+      run: |
+        pip install pytest
+        pytest tests --quiet --collect-only
+
+    - name: Style Check
+      run: ruff check
