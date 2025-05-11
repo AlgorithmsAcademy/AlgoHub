@@ -58,7 +58,7 @@ select = ["ALL"]
 ignore = ["D203", "D213", "COM812", "TRY300", "PD901"]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/**/*.py" = ["S101", "D"]
+"{test_*.py,**/tests/**/*.py}" = ["S101", "D"]
 
 [tool.ruff.format]
 quote-style = "double"
