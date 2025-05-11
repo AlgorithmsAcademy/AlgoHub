@@ -1,0 +1,84 @@
+name: Issue Automatic Renaming
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+
+jobs:
+  rename-issue:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Rename for New Algo Issues
+      uses: actions/github-script@v7
+      if: contains(github.event.issue.body, '### Algo_Name')
+      with:
+        script: |
+          const issueBody = context.payload.issue.body;
+          console.log("Issue Body:\n", issueBody);
+
+          const match = /### Algo_Name\s*\n+(.+?)(\n+###|\n*$)/s.exec(issueBody);
+          if (!match) {
+            console.log("🚫 Could not find algo name in Markdown.");
+            return;
+          }
+
+          const algoName = match[1].trim();
+          const issueNumber = context.issue.number;
+          const formattedAlgoName = algoName
+            .toLowerCase()
+            .replace(/\s+/g, '_')       // Replace spaces with underscores
+            .replace(/[^\w_]/g, '')     // Remove special characters
+            .replace(/_+/g, '_');       // Replace multiple underscores with single
+
+          const newTitle = `✨ Implement ${formattedAlgoName}`;
+
+          console.log(`🔧 Updating issue title to: ${newTitle}`);
+
+          await github.rest.issues.update({
+            ...context.repo,
+            issue_number: issueNumber,
+            title: newTitle,
+            body: `📝 Algorithm has been formatted for consistency as \`${formattedAlgoName}\`. Please use this format in your implementation file names.`
+          });
+
+    - name: Rename for Bug Report Issues
+      uses: actions/github-script@v7
+      if: contains(github.event.issue.body, '### Type')
+      with:
+        script: |
+          const body = context.payload.issue.body;
+          console.log("Issue Body:\n", body);
+
+          const typeMatch = /### Type\s+(.+?)\s*(###|$)/s.exec(body);
+          const Type = typeMatch ? typeMatch[1].trim() : null;
+
+          if (!Type) {
+            console.log("🚫 Could not find Type in Markdown.");
+            return;
+          }
+
+          const typeMap = {
+            "🧮 Algorithm Implementation": "🧮",
+            "🛠 CI/Tooling Issue": "🛠",
+            "📘 Algorithm Documentation": "📘",
+            "🖋 General Documentation": "🖋",
+            "🧪 Test Failure or Adding Testcase": "🧪",
+            "❓ Other / Not Sure": "❓",
+          };
+          const typeIcon = typeMap[Type] || "❓";
+
+          const rawTitle = context.payload.issue.title;
+
+          const issueNumber = context.issue.number;
+          const updatedTitle = `⚠️ - ${typeIcon} [Bug]: ${rawTitle}`;
+
+          console.log(`🔧 Updating issue title to: ${updatedTitle}`);
+
+          await github.rest.issues.update({
+            ...context.repo,
+            issue_number: issueNumber,
+            title: updatedTitle
+          });
